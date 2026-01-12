@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at center, #3a3a3a, #111);
+    color: rgb(255, 255, 255);
+    font-family: 'Inter', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #255527;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+}
+
+.nav-search input {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    width: 260px;
+}
+
+nav a {
+    margin-left: 25px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+nav a.active {
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+nav a:hover{
+    color:#0000ff;
+}
+
+a:visited {
+  color: #ffffff; 
+}
+
+a {
+  text-decoration: none;
+}
+
+/* MAIN LAYOUT */
+.main {
+    display: flex;
+    padding: 60px;
+    gap: 50px;
+}
+
+/* LEFT SIDE */
+.left h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+}
+
+.subtitle {
+    margin: 15px 0 30px;
+    opacity: 0.8;
+}
+
+.search-big input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 40px;
+}
+
+.info-card {
+    background: #215423;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 600px;
+}
+
+.info-card h3 {
+    margin-bottom: 10px;
+}
+
+/* LOGIN CARD */
+.login-card {
+    background: #215423;
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.login-card h2 {
+    font-family: 'Cinzel', serif;
+    margin-bottom: 20px;
+}
+
+.login-card label {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border-radius: 8px;
+    border: none;
+}
+
+.enter-btn {
+    background: white;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.google, .linkedin {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .main {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .login-card {
+        width: 100%;
+    }
+
+    .nav-search {
+        display: none;
+    }
+}
+
+/* ADD EXPENSE PAGE */
+.add-expense-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.expense-card {
+    background: #215423;
+    padding: 35px;
+    border-radius: 20px;
+    width: 420px;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.expense-card h2 {
+    font-family: 'Cinzel', serif;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.expense-card label {
+    display: block;
+    font-size: 14px;
+    margin-top: 15px;
+    opacity: 0.85;
+}
+
+.expense-card input,
+.expense-card select,
+.expense-card textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.expense-card textarea {
+    resize: none;
+    height: 80px;
+}
+
+.expense-card button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: white;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+    .expense-card {
+        width: 100%;
+    }
+}
+/* REPORT PAGE */
+.report-main {
+    padding: 40px 20px;
+}
+
+/* FILTER */
+.report-filter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.report-filter button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+.report-filter button.active {
+    background: white;
+    color: black;
+}
+
+/* SUMMARY */
+.summary-card {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.summary-card h1 {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+/* EXPENSE LIST */
+.expense-list {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.expense-list ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.expense-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* AI INSIGHTS */
+.ai-insights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.ai-card {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.ai-card h3 {
+    margin-bottom: 10px;
+}
+.back-btn {
+    
+    display: inline-block;
+    margin: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.back-btn:hover {
+    opacity: 1;
+}
+
+
+.ai-generate {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.ai-generate button {
+  padding: 12px 20px;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.ai-generate button:hover {
+  background: #8d8d8d;
+}
+
+
+.loading-text {
+  font-style: italic;
+  opacity: 0.7;
+}

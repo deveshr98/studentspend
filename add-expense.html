@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expense</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">StudentSpend</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="add-expense.html" class="active">Add Expense</a>
+        <a href="report.html">My Report</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="add-expense-main">
+
+    <div class="expense-card">
+        <h2>Add New Expense</h2>
+
+        <label>Expense Title</label>
+        <input type="text" id="title" placeholder="e.g. Coffee, Books">
+
+        <label>Amount (₹)</label>
+        <input type="number" id="amount" placeholder="e.g. 250">
+
+        <label>Category</label>
+        <select id="category">
+            <option value="">Select category</option>
+            <option>Food</option>
+            <option>Travel</option>
+            <option>Education</option>
+            <option>Shopping</option>
+            <option>Other</option>
+        </select>
+
+        <label>Date</label>
+        <input type="date" id="date">
+
+        <label>Notes (optional)</label>
+        <textarea id="notes" placeholder="Any extra details..."></textarea>
+
+        <button onclick="saveExpense()">Save Expense</button>
+    </div>
+
+</main>
+
+<script src="auth.js"></script>
+<script>
+    checkAuth();
+</script>
+
+<script src="add-expense.js"></script>
+</body>
+</html>

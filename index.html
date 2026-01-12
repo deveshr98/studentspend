@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentSpend</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">StudentSpend</div>
+
+        <div class="nav-search">
+            <input type="text" placeholder="Feel Free To Ask">
+        </div>
+
+        <nav>
+            <a class="active">Home</a>
+            <a href="#" onclick="openProtectedPage('add-expense.html')">Add Expense</a>
+            <a href="#" onclick="openProtectedPage('report.html')">My Report</a>
+            <a href="#" id="authNav" onclick="handleAuthNav()">Login</a>
+        </nav>
+
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main class="main">
+
+        <!-- LEFT CONTENT -->
+        <section class="left">
+            <h1>Welcome to StudentSpend</h1>
+            <p class="subtitle">The One Step Solution for your Daily Expenses</p>
+
+            <div class="search-big">
+                <input type="text" placeholder="Feel Free To Ask">
+            </div>
+
+            <div class="info-card">
+                <h3>So, What does your Application do??</h3>
+                <p>
+                    Students often struggle to manage money due to a lack of personalized guidance.
+                    We solve this problem by combining real-time expense tracking with Gemini-powered
+                    AI insights to help students build better financial habits.
+                </p>
+            </div>
+        </section>
+
+        <!-- RIGHT LOGIN CARD -->
+        <section class="login-card" id="homeLoginCard">
+            <h2>Login</h2>
+
+            <label>Email ID</label>
+            <input type="email" id="homeEmail" placeholder="Mail ID">
+
+            <label>Password</label>
+            <input type="password" id="homePassword" placeholder="Password">
+
+
+            <button class="enter-btn" onclick="homeLogin()">Enter →</button>
+
+
+            <button class="google">Sign in with Google</button>
+            <button class="linkedin">Sign in with LinkedIn</button>
+        </section>
+
+    </main>
+
+    <script src="auth.js"></script>
+    <script>
+        updateAuthNav();
+        updateHomeUI();
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

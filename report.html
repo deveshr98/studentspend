@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Report</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- AUTH CHECK -->
+    <script src="auth.js"></script>
+    <script>checkAuth();</script>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">StudentSpend</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="add-expense.html">Add Expense</a>
+            <a href="report.html" class="active">My Report</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="report-main">
+
+        <!-- REPORT FILTER -->
+        <section class="report-filter">
+            <button class="active" onclick="changeReport('month')">This Month</button>
+            <button onclick="changeReport('week')">This Week</button>
+            <button onclick="changeReport('year')">This Year</button>
+        </section>
+
+
+        <!-- SUMMARY -->
+        <section class="summary-card">
+            <h2 id="reportTitle">Monthly Expense Summary</h2>
+
+            <p>Total Spent</p>
+            <h1 id="totalAmount">₹0</h1>
+        </section>
+
+        <!-- EXPENSE LIST -->
+        <section class="expense-list">
+            <h3>Your Expenses</h3>
+            <ul id="expenseContainer">
+                <!-- Expenses will appear here -->
+            </ul>
+        </section>
+
+
+ 
+        <!-- AI INSIGHTS -->
+        <section class="ai-insights">
+
+
+           
+        <div class="ai-generate">
+        <button id="generateAIBtn">Generate AI Insights</button>
+    </div>
+
+            <div class="ai-box">
+                <h3 id="nextStepTitle">📌 What should I do next month?</h3>
+                <p id="nextStepText">Loading AI insight...</p>
+            </div>
+
+            <div class="ai-box">
+                <h3>⚠️ My mistakes</h3>
+                <p id="mistakeText">Loading AI insight...</p>
+            </div>
+
+            <div class="ai-box">
+                <h3>👀 Where should I pay more attention?</h3>
+                <p id="attentionText">Loading AI insight...</p>
+            </div>
+
+
+        </section>
+
+    </main>
+    <script src="auth.js"></script>
+<script src="gemini.js"></script>   <!-- 👈 REQUIRED -->
+<script src="report.js"></script>
+</body>
+
+</html>
